@@ -79,8 +79,8 @@ CV = {
         'Captained a team of four over 24 hours, coordinating 80+ issues and pull requests and contributing over half of them.',
         'Maintainers fund bounties over Lightning through Bitnob; developers are paid in sats as soon as their fix is merged.']),
       ('TheQuestBoard', 'Where artists find paid commissions', 'thequestboard.co', '2023 – 2026', [
-        'Brings commission requests from 20+ forums into one searchable board, so artists find clients without checking every site.',
-        'Personalized Discord alerts for new requests; running since 2023 on scrapers, an API and PostgreSQL.']),
+        'A live board of art opportunities from 16 sources, Reddit communities and job boards, with Reddit checked every 10 minutes.',
+        'Personalized Discord alerts by DM or server; hosted online, with scrapers, an API and PostgreSQL.']),
       ('Multiprise', 'Control center for development servers, on macOS', 'multiprise.vercel.app', '2026', [
         'Run all your development servers from one window: it finds what each project can start, gives every service a port that never clashes, and keeps logs and previews side by side.',
         'Coding agents use it too, through a CLI and an MCP server, so they reuse running services instead of starting duplicates.']),
@@ -157,8 +157,8 @@ CV = {
         "Capitaine d'une équipe de quatre en 24 heures : coordination de plus de 80 issues et pull requests, dont plus de la moitié à mon actif.",
         "Les mainteneurs financent les primes via Lightning et Bitnob ; les développeurs sont payés en sats dès que leur correctif est fusionné."]),
       ('TheQuestBoard', 'Là où les artistes trouvent des commandes', 'thequestboard.co', '2023 – 2026', [
-        "Réunit les demandes de commandes de plus de 20 forums en un seul tableau, pour trouver des clients sans parcourir chaque site.",
-        "Alertes Discord personnalisées ; en ligne depuis 2023, avec scrapers, API et PostgreSQL."]),
+        "Un tableau en direct d'offres pour artistes, issues de 16 sources (communautés Reddit et sites d'emploi), avec Reddit relu toutes les 10 minutes.",
+        "Alertes Discord personnalisées, en message privé ou sur serveur ; hébergé en ligne, avec scrapers, API et PostgreSQL."]),
       ('Multiprise', 'Centre de contrôle des serveurs de développement, sur macOS', 'multiprise.vercel.app', '2026', [
         "Lance tous vos serveurs de développement depuis une fenêtre : il trouve ce que chaque projet peut démarrer, attribue des ports sans conflit et réunit logs et aperçus.",
         "Les agents de code s'en servent aussi, via une CLI et un serveur MCP, pour réutiliser les services lancés au lieu d'en démarrer des doublons."]),

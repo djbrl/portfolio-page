@@ -85,13 +85,19 @@ const projectGalleries = {
       'thequestboard',
       'home.webp',
       { fr: 'Page d’accueil de TheQuestBoard avec le tableau en direct', en: 'TheQuestBoard home page with the live board below' },
-      { fr: 'La page d’accueil, avec le nombre de nouvelles demandes et le tableau juste en dessous.', en: 'The home page, with live counts of new requests and the board right below.' },
+      { fr: 'La page d’accueil : les nouveautés du jour, les offres les mieux payées et le tableau juste en dessous.', en: 'The home page: what’s new today, the top-paying listings and the board right below.' },
     ),
     galleryShot(
       'thequestboard',
       'board-filtered.webp',
-      { fr: 'Tableau filtré sur les demandes 3D, avec budgets et sources', en: 'Board filtered to 3D requests, with budgets and sources' },
-      { fr: 'Le tableau filtré sur la 3D : chaque demande affiche son budget, son ancienneté et sa source.', en: 'The board filtered to 3D work: each request shows its budget, age and source.' },
+      { fr: 'Tableau filtré sur les offres 3D, avec budgets et sources', en: 'Board filtered to 3D listings, with budgets and sources' },
+      { fr: 'Le tableau filtré sur la 3D : chaque offre affiche son budget, son ancienneté et sa source.', en: 'The board filtered to 3D work: each listing shows its budget, age and source.' },
+    ),
+    galleryShot(
+      'thequestboard',
+      'listing.webp',
+      { fr: 'Une offre dépliée sur le tableau', en: 'A listing expanded on the board' },
+      { fr: 'Une offre dépliée : le brief se lit en entier, sans quitter le tableau.', en: 'An expanded listing: read the full brief without leaving the board.' },
     ),
     galleryShot(
       'thequestboard',
@@ -374,37 +380,44 @@ const projects: PortfolioProject[] = [
   {
     name: 'TheQuestBoard',
     kind: 'personal',
-    tileImage: '/work/logos/thequestboard.webp',
+    tileImage: '/work/logos/thequestboard.svg',
     year: '2023–2026',
     short: { fr: 'Repérage de commandes pour artistes', en: 'Commission discovery for artists' },
     description: {
-      fr: 'Réunit en un seul tableau consultable les demandes de commandes d’artistes publiées sur plus de 20 forums, avec des alertes Discord personnalisées.',
-      en: 'Aggregates artist commission requests from 20+ forums into one searchable board, with personalized Discord alerts.',
+      fr: 'Un tableau en direct, en ligne, des offres pour artistes : 16 sources, entre communautés Reddit et sites d’emploi, avec des alertes Discord personnalisées.',
+      en: 'A live, hosted board of art opportunities: 16 sources across Reddit communities and job boards, with personalized Discord alerts.',
     },
     role: {
-      fr: 'Conception produit et développement full-stack, de la collecte des annonces sur les forums jusqu’à la recherche et aux alertes Discord.',
-      en: 'Product design and full-stack development, from gathering posts across forums to search and Discord alerts.',
+      fr: 'Conception produit et développement full-stack, de la collecte des annonces jusqu’à la recherche, aux alertes Discord et à l’hébergement du service.',
+      en: 'Product design and full-stack development, from gathering posts to search, Discord alerts and hosting the service.',
     },
     features: [
       {
-        title: { fr: 'Demandes de plus de 20 forums', en: 'Requests from 20+ forums' },
+        title: { fr: 'Un tableau en direct', en: 'A live board' },
         text: {
-          fr: 'Les demandes de commandes publiées sur plus de 20 forums, rassemblées dans une seule liste consultable.',
-          en: 'Commission requests posted on more than 20 forums, collected in one list you can search.',
+          fr: 'Le service tourne en ligne : Reddit est relu toutes les 10 minutes et les sites d’emploi toutes les heures, sans rien à installer.',
+          en: 'It runs online: Reddit is checked every 10 minutes and job boards every hour, with nothing to install.',
+        },
+      },
+      {
+        title: { fr: '16 sources, une seule liste', en: '16 sources, one list' },
+        text: {
+          fr: 'Douze communautés Reddit et quatre sites d’emploi, réunis dans une seule liste consultable.',
+          en: 'Twelve Reddit communities and four job boards, collected in one list you can search.',
         },
       },
       {
         title: { fr: 'Filtres', en: 'Filters' },
         text: {
-          fr: 'Filtrez par type d’art, par site d’origine et par budget. Les nouvelles annonces sont signalées.',
-          en: 'Filter by type of art, where it was posted and budget. New posts are marked.',
+          fr: 'Filtrez par illustration, animation, 3D ou VFX, par source et par budget. Les offres les mieux payées du jour sont en tête.',
+          en: 'Filter by illustration, animation, 3D or VFX, by source and by budget. The top-paying listings of the day sit on top.',
         },
       },
       {
         title: { fr: 'Alertes Discord', en: 'Discord alerts' },
         text: {
-          fr: 'Les demandes qui vous correspondent arrivent sur Discord, avec leur budget, leur source et leur heure.',
-          en: 'Requests that match you are sent to Discord, with their budget, source and time.',
+          fr: 'Connectez Discord pour recevoir vos offres en message privé ou sur un serveur, avec vos propres mots-clés et un résumé quotidien en option.',
+          en: 'Connect Discord to get matches by DM or in a server channel, with your own keywords and an optional daily digest.',
         },
       },
     ],
@@ -894,4 +907,4 @@ export const githubRepos: { name: string; language: string; year: string; text: 
 ];
 
 // Grid order (see the tile-N areas in css/main.css): one 2×2 feature, three wide tiles, five squares.
-export const gridProjects = [projects[4], projects[2], projects[3], projects[1], projects[5], clientProjects[2], clientProjects[1], clientProjects[0], projects[0]];
+export const gridProjects = [projects[4], projects[2], projects[0], projects[3], projects[1], projects[5], clientProjects[2], clientProjects[1], clientProjects[0]];

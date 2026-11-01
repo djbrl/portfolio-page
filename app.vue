@@ -275,7 +275,7 @@ const heroReel = computed(() => isFrench.value
         { key: 'rundown', logo: '/work/logos/chips/rundown.svg', word: 'des outils IA.', proof: 'Rundown, 3e place au Sénégal au hackathon GOMYCODE × NVIDIA' },
         { key: 'bitbounty', logo: '/work/logos/chips/bitbounty.svg', word: 'de la fintech.', proof: 'BitBounty, prix de bronze à Code & Chain Dakar' },
         { key: 'skindiff', logo: '/work/logos/chips/skindiff.png', word: 'pour les joueurs.', proof: 'SkinDiff, la meilleure app pour assortir ses skins League of Legends' },
-        { key: 'thequestboard', logo: '/work/logos/chips/thequestboard.png', word: 'pour les artistes.', proof: 'TheQuestBoard, des commandes venues de plus de 20 forums' },
+        { key: 'thequestboard', logo: '/work/logos/chips/thequestboard.svg', word: 'pour les artistes.', proof: 'TheQuestBoard, un tableau en direct de 16 sources' },
       ],
     }
   : {
@@ -287,7 +287,7 @@ const heroReel = computed(() => isFrench.value
         { key: 'rundown', logo: '/work/logos/chips/rundown.svg', word: 'AI tools.', proof: 'Rundown, 3rd in Senegal at GOMYCODE × NVIDIA' },
         { key: 'bitbounty', logo: '/work/logos/chips/bitbounty.svg', word: 'fintech.', proof: 'BitBounty, bronze prize at Code & Chain Dakar' },
         { key: 'skindiff', logo: '/work/logos/chips/skindiff.png', word: 'for players.', proof: 'SkinDiff, the best skin-matching app for League of Legends' },
-        { key: 'thequestboard', logo: '/work/logos/chips/thequestboard.png', word: 'for artists.', proof: 'TheQuestBoard, commissions from 20+ forums' },
+        { key: 'thequestboard', logo: '/work/logos/chips/thequestboard.svg', word: 'for artists.', proof: 'TheQuestBoard, a live board of 16 sources' },
       ],
     });
 // On phones the About page must fit one screen. CSS sizes it from the screen; if the text still
@@ -1313,7 +1313,7 @@ html.fonts-pending .hero-intro .hero-section-links {
 }
 
 .projects-page .tile-project-thequestboard {
-  background:#f2efe5;
+  background:#191917;
 }
 
 .projects-page .tile-project-skindiff {
@@ -1357,10 +1357,11 @@ html.fonts-pending .hero-intro .hero-section-links {
   object-position:center;
 }
 
-/* A square logo: show all of it, on the logo's own cream, in wide strip tiles too. */
+/* A square logo: show all of it, on the logo's own dark, in wide strip tiles too. */
 .projects-page .tile-project-thequestboard img {
   object-fit:contain;
   object-position:center;
+  padding:18px;
 }
 
 .projects-page {
