@@ -141,27 +141,39 @@ const projectGalleries = {
   multiprise: [
     galleryShot(
       'multiprise',
+      'hero.webp',
+      { fr: 'Un projet lancé dans Multiprise, avec ses services et le site dans le navigateur intégré', en: 'A running project in Multiprise, with its services and the site in the built-in browser' },
+      { fr: 'Un projet lancé : chaque service a son port, son adresse et ses boutons, avec le site ouvert juste à côté.', en: 'A running project: every service has its port, address and controls, with the site open right beside them.' },
+    ),
+    galleryShot(
+      'multiprise',
+      'running.webp',
+      { fr: 'Accueil de Multiprise listant tous les serveurs de développement du Mac', en: 'Multiprise home listing every dev server on the Mac' },
+      { fr: 'L’accueil liste chaque serveur de développement du Mac, quel que soit celui qui l’a lancé, et signale ceux qui ont été oubliés.', en: 'The home screen lists every dev server on the Mac, whoever started it, and flags the ones left behind.' },
+    ),
+    galleryShot(
+      'multiprise',
+      'logs.webp',
+      { fr: 'Logs d’un projet filtrés sur un mot, avec les avertissements surlignés', en: 'A project’s logs filtered on a word, with warnings highlighted' },
+      { fr: 'Les logs de tous les services dans un seul flux, filtrables par mot, service ou niveau.', en: 'Every service’s logs in one stream, filtered by word, service or level.' },
+    ),
+    galleryShot(
+      'multiprise',
+      'activity.webp',
+      { fr: 'Écran Activité : processeur et mémoire par serveur de développement', en: 'Activity screen: CPU and memory per dev server' },
+      { fr: 'L’écran Activité montre ce que chaque projet coûte en processeur et en mémoire, et ce qui occupe le reste du Mac.', en: 'The Activity screen shows what each project costs in CPU and memory, and what else is using the Mac.' },
+    ),
+    galleryShot(
+      'multiprise',
+      'add.webp',
+      { fr: 'Fenêtre d’ajout de projets listant trois services détectés', en: 'Add Projects dialog listing three detected services' },
+      { fr: 'Ajout d’un projet : Multiprise liste les services trouvés et la commande qui lancera chacun.', en: 'Adding a project: Multiprise lists the services it found and the command that starts each one.' },
+    ),
+    galleryShot(
+      'multiprise',
       'site.webp',
       { fr: 'Page d’accueil du site de Multiprise', en: 'Multiprise website home page' },
       { fr: 'Le site de Multiprise, avec la version préliminaire pour Mac Apple Silicon.', en: 'The Multiprise website, with the early build for Apple Silicon Macs.' },
-    ),
-    galleryShot(
-      'multiprise',
-      'launch.webp',
-      { fr: 'Multiprise lançant un projet avec deux services et leurs logs', en: 'Multiprise running a project with two services and their logs' },
-      { fr: 'Un projet lancé : chaque service a son port et son adresse, avec les logs à côté.', en: 'A running project: each service has its own port and address, with the logs beside them.' },
-    ),
-    galleryShot(
-      'multiprise',
-      'add-project.webp',
-      { fr: 'Fenêtre d’ajout de projets listant trois services détectés', en: 'Add Projects dialog listing three detected services' },
-      { fr: 'Ajout d’un projet : Multiprise liste les services trouvés et la commande qui les lancera.', en: 'Adding a project: Multiprise lists the services it found and how it will start them.' },
-    ),
-    galleryShot(
-      'multiprise',
-      'browser.webp',
-      { fr: 'Un site lancé, ouvert dans le navigateur intégré de Multiprise', en: 'A running site open in the Multiprise built-in browser' },
-      { fr: 'Le navigateur intégré affiche le site lancé sans quitter l’application.', en: 'The built-in browser shows the running site without leaving the app.' },
     ),
   ],
   minapro: [
@@ -512,24 +524,31 @@ const projects: PortfolioProject[] = [
         },
       },
       {
-        title: { fr: 'Adresses lisibles', en: 'Readable addresses' },
+        title: { fr: 'Tous les serveurs du Mac', en: 'Every server on your Mac' },
         text: {
-          fr: 'Chaque service a aussi un nom fixe, comme web.shop.localhost.',
-          en: 'Each service also gets a fixed name, like web.shop.localhost.',
+          fr: 'Voit chaque serveur de développement, lancé par Multiprise, un terminal ou un agent, et signale ceux qui ont été oubliés.',
+          en: 'Sees every dev server, started by Multiprise, a terminal or an agent, and flags the ones left behind.',
         },
       },
       {
-        title: { fr: 'Logs', en: 'Logs' },
+        title: { fr: 'Logs et aperçu', en: 'Logs and preview' },
         text: {
-          fr: 'Toute la sortie d’un projet dans une seule vue consultable. Les erreurs ont un bouton pour les corriger.',
-          en: 'All of a project’s output in one searchable view. Errors come with a button to fix them.',
+          fr: 'La sortie de tous les services dans un seul flux consultable, avec le site ouvert dans un onglet juste à côté.',
+          en: 'Every service’s output in one searchable stream, with the site open in a tab right beside it.',
         },
       },
       {
-        title: { fr: 'Accès pour les outils IA', en: 'Access for AI tools' },
+        title: { fr: 'Activité', en: 'Activity' },
         text: {
-          fr: 'Les assistants de code comme Claude Code peuvent aussi lister, lancer et lire les services, au lieu d’en démarrer des copies.',
-          en: 'Coding assistants like Claude Code can list, start and read services too, instead of starting copies.',
+          fr: 'Ce que chaque projet coûte en processeur et en mémoire, et ce qui occupe le reste du Mac.',
+          en: 'What each project costs in CPU and memory, and what else is using your Mac.',
+        },
+      },
+      {
+        title: { fr: 'CLI et serveur MCP', en: 'CLI and MCP server' },
+        text: {
+          fr: 'Tout ce que fait l’application se fait aussi depuis un terminal ou un agent de code, qui réutilise les services lancés au lieu d’en démarrer des copies.',
+          en: 'Everything the app does works from a terminal or a coding agent too, so agents reuse running services instead of starting copies.',
         },
       },
     ],
@@ -907,4 +926,4 @@ export const githubRepos: { name: string; language: string; year: string; text: 
 ];
 
 // Grid order (see the tile-N areas in css/main.css): one 2×2 feature, three wide tiles, five squares.
-export const gridProjects = [projects[4], projects[2], projects[0], projects[3], projects[1], projects[5], clientProjects[2], clientProjects[1], clientProjects[0]];
+export const gridProjects = [projects[2], projects[0], projects[1], projects[4], projects[3], projects[5], clientProjects[2], clientProjects[1], clientProjects[0]];
