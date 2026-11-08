@@ -176,6 +176,58 @@ const projectGalleries = {
       { fr: 'Le site de Multiprise, avec la version préliminaire pour Mac Apple Silicon.', en: 'The Multiprise website, with the early build for Apple Silicon Macs.' },
     ),
   ],
+  courier: [
+    galleryShot(
+      'courier',
+      'landing.webp',
+      { fr: 'Page d’accueil de Courier : donnez une identité à votre agent', en: 'Courier landing page: give your agent an ID' },
+      { fr: 'PayPal vous vérifie, votre agent reçoit sa propre identité.', en: 'PayPal verifies you, and your agent gets its own ID.' },
+    ),
+    galleryShot(
+      'courier',
+      'errand-room.webp',
+      { fr: 'Un agent achète un disque dans une boutique, payé avec PayPal', en: 'An agent buying a record in a shop, paid with PayPal' },
+      { fr: 'Une course : l’agent cherche dans la boutique et achète, sans dépasser le budget fixé.', en: 'An errand: the agent browses the shop and buys, without going over the budget you set.' },
+    ),
+    galleryShot(
+      'courier',
+      'shop-view.webp',
+      { fr: 'Vue de la boutique : agents vérifiés et commandes signées', en: 'The shop’s view: verified agents and signed orders' },
+      { fr: 'Côté boutique : chaque agent montre une identité vérifiée et ses limites, jamais le nom de la personne.', en: 'The shop’s side: every agent shows a verified ID and its limits, never the person’s name.' },
+    ),
+    galleryShot(
+      'courier',
+      'bots.webp',
+      { fr: 'Huit attaques contre la boutique, bloquées ou signalées', en: 'Eight attacks on the shop, blocked or flagged' },
+      { fr: '« Lâchez les bots » : huit vraies attaques, des faux jetons à l’injection de prompt, bloquées ou signalées.', en: '“Release the bots”: eight real attacks, from forged tokens to prompt injection, blocked or flagged.' },
+    ),
+  ],
+  tweetstash: [
+    galleryShot(
+      'tweetstash',
+      'describe.webp',
+      { fr: 'Recherche par description retrouvant un dessin de chat noir', en: 'Description search finding a drawing of a black cat' },
+      { fr: 'Décrivez un post comme vous vous en souvenez : l’IA lit les pistes probables, images comprises, et trouve le bon.', en: 'Describe a post the way you remember it: the AI reads the likely matches, pictures included, and finds the right one.' },
+    ),
+    galleryShot(
+      'tweetstash',
+      'more-like-this.webp',
+      { fr: 'Résultats « Plus comme ça » à partir d’un post', en: '“More like this” results from a post' },
+      { fr: '« Plus comme ça » retrouve les posts qui se ressemblent, grâce à un modèle qui tourne sur votre ordinateur.', en: '“More like this” finds posts that look alike, with a model running on your computer.' },
+    ),
+    galleryShot(
+      'tweetstash',
+      'colour.webp',
+      { fr: 'Favoris filtrés par couleur dans la catégorie Art', en: 'Bookmarks filtered by colour in the Art category' },
+      { fr: 'Choisissez une couleur et obtenez les images qui la contiennent.', en: 'Pick a colour and get the pictures that contain it.' },
+    ),
+    galleryShot(
+      'tweetstash',
+      'library.webp',
+      { fr: 'Bibliothèque TweetStash en thème sombre', en: 'TweetStash library in dark theme' },
+      { fr: 'La bibliothèque, triée par compte, catégorie et tag, en thème clair ou sombre.', en: 'The library, sorted by account, category and tag, in light or dark theme.' },
+    ),
+  ],
   minapro: [
     galleryShot(
       'maeic',
@@ -735,6 +787,106 @@ const projects: PortfolioProject[] = [
     alt: { fr: 'Page d’accueil de BitBounty', en: 'BitBounty home page' },
     gallery: projectGalleries.bitbounty,
   },
+  {
+    name: 'Courier',
+    kind: 'personal',
+    tileImage: '/work/logos/courier.svg',
+    year: '2026',
+    short: { fr: 'Une identité pour vos agents IA, avec un budget pour chaque achat', en: 'An ID for your AI agents, with a budget for every purchase' },
+    description: {
+      fr: 'Les agents IA savent chercher, mais pas encore acheter en toute sécurité. Courier leur donne une identité : PayPal vous vérifie, vous ajoutez un connecteur à Claude, et chaque demande devient une course avec son propre budget, dans toute boutique qui accepte Courier. Les limites sont appliquées par le code, et la boutique voit un agent vérifié, jamais votre nom. Basé sur MCP et OAuth 2.1, sans client sur mesure.',
+      en: 'AI agents can search, but can’t yet buy safely. Courier gives them an ID: PayPal verifies you, you add one connector to Claude, and every request becomes an errand with its own budget, at any shop that accepts Courier. Limits are enforced in code, and the shop sees a verified agent, never your name. Built on standard MCP and OAuth 2.1, with no custom client.',
+    },
+    role: {
+      fr: 'Conception produit et développement complet : service d’identité, serveur MCP, boutique de démonstration et tests d’attaque.',
+      en: 'Product design and end-to-end development: identity service, MCP server, demo shop and attack tests.',
+    },
+    features: [
+      {
+        title: { fr: 'Une course, un budget', en: 'One errand, one budget' },
+        text: {
+          fr: 'Budget, limite par article, boutique et expiration sont vérifiés avant que le modèle n’agisse. Seul vous fixez le budget.',
+          en: 'Budget, per-item limit, shop and expiry are checked before any model runs. Only you set the budget.',
+        },
+      },
+      {
+        title: { fr: 'Identité vérifiée', en: 'Verified ID' },
+        text: {
+          fr: 'Chaque commande porte une preuve signée de ce qui était autorisé. La boutique voit l’agent et ses limites, pas la personne.',
+          en: 'Every order carries signed proof of what was allowed. The shop sees the agent and its limits, not the person.',
+        },
+      },
+      {
+        title: { fr: 'Révocable à tout moment', en: 'Call it back any time' },
+        text: {
+          fr: 'Révoquer un agent prend effet en quelques secondes, et Claude reste connecté pour la prochaine course.',
+          en: 'Revoking an agent takes effect in seconds, and Claude stays connected for the next errand.',
+        },
+      },
+      {
+        title: { fr: 'Testé contre les attaques', en: 'Tested against attacks' },
+        text: {
+          fr: 'Huit attaques réelles, dont des jetons volés, des dépassements de budget et l’injection de prompt, tournent à chaque commit.',
+          en: 'Eight real attacks, including stolen tokens, overspending and prompt injection, run on every commit.',
+        },
+      },
+    ],
+    tags: ['MCP', 'OAuth 2.1', 'PayPal', 'TypeScript'],
+    href: 'https://github.com/Djbrl/courier',
+    image: '/work/case-studies/courier/landing.webp',
+    alt: { fr: 'Page d’accueil de Courier', en: 'Courier landing page' },
+    gallery: projectGalleries.courier,
+  },
+  {
+    name: 'TweetStash',
+    kind: 'personal',
+    tileImage: '/work/logos/tweetstash.svg',
+    year: '2026',
+    short: { fr: 'Retrouvez les posts que vous avez enregistrés sur X', en: 'Search the posts you saved on X' },
+    description: {
+      fr: 'Les favoris de X s’empilent sans qu’on puisse les retrouver. TweetStash les rapatrie grâce à une extension Chrome, les range automatiquement et permet de les chercher par mot-clé, par couleur ou en décrivant simplement le post dont on se souvient. Tout reste sur votre ordinateur : pas de compte, et l’IA n’est utilisée que si vous l’activez, avec votre propre clé.',
+      en: 'X bookmarks pile up with no way to find them again. TweetStash brings them in with a Chrome extension, tags them automatically and lets you search by keyword, by colour, or by simply describing the post you remember. Everything stays on your computer: no account, and AI only runs if you turn it on, with your own key.',
+    },
+    role: {
+      fr: 'Conception produit et développement complet : extension Chrome, serveur local, tableau de bord et recherche par IA.',
+      en: 'Product design and end-to-end development: Chrome extension, local server, dashboard and AI search.',
+    },
+    features: [
+      {
+        title: { fr: 'Recherche par description', en: 'Description search' },
+        text: {
+          fr: 'Décrivez un post comme vous vous en souvenez (« ce dessin à l’encre d’un chat noir géant ») et Claude le retrouve, images comprises.',
+          en: 'Describe a post the way you remember it (“that ink drawing of a giant black cat”) and Claude finds it, pictures included.',
+        },
+      },
+      {
+        title: { fr: 'Tags automatiques', en: 'Automatic tags' },
+        text: {
+          fr: 'Chaque post reçoit une catégorie, des tags et une description de son image. Les tags ajoutés à la main sont conservés.',
+          en: 'Every post gets a category, tags and a description of its picture. Tags you add by hand are kept.',
+        },
+      },
+      {
+        title: { fr: 'Recherche visuelle locale', en: 'Local visual search' },
+        text: {
+          fr: 'Un modèle CLIP sur votre ordinateur indexe chaque image gratuitement : « plus comme ça », styles artistiques et recherche par couleur.',
+          en: 'A CLIP model on your computer indexes every picture for free: “more like this”, art styles and colour search.',
+        },
+      },
+      {
+        title: { fr: 'Privé par défaut', en: 'Private by default' },
+        text: {
+          fr: 'Une base SQLite sur votre machine, sans compte. Un connecteur permet aussi à Claude de chercher dans vos favoris.',
+          en: 'A SQLite database on your machine, with no account. A connector also lets Claude search your stash.',
+        },
+      },
+    ],
+    tags: ['Chrome extension', 'Node.js', 'SQLite', 'Claude', 'CLIP'],
+    href: 'https://github.com/djbrl/tweetstash',
+    image: '/work/case-studies/tweetstash/describe.webp',
+    alt: { fr: 'Interface de TweetStash', en: 'TweetStash interface' },
+    gallery: projectGalleries.tweetstash,
+  },
 ];
 
 const clientProjects: PortfolioProject[] = [
@@ -926,4 +1078,4 @@ export const githubRepos: { name: string; language: string; year: string; text: 
 ];
 
 // Grid order (see the tile-N areas in css/main.css): one 2×2 feature, three wide tiles, five squares.
-export const gridProjects = [projects[2], projects[0], projects[1], projects[4], projects[3], projects[5], clientProjects[2], clientProjects[1], clientProjects[0]];
+export const gridProjects = [projects[2], projects[0], projects[1], projects[6], projects[4], projects[3], projects[5], projects[7], clientProjects[2], clientProjects[1]];
