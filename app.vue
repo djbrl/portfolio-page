@@ -1322,8 +1322,12 @@ html.fonts-pending .hero-intro .hero-section-links {
   background:#fff;
 }
 
+.projects-page .tile-project-designle {
+  background:#e30613;
+}
+
 .projects-page .tile-project-courier {
-  background:#dcf53c;
+  background:#3d3af5;
 }
 
 .projects-page .tile-project-tweetstash {

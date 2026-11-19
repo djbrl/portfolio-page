@@ -176,6 +176,32 @@ const projectGalleries = {
       { fr: 'Le site de Multiprise, avec la version préliminaire pour Mac Apple Silicon.', en: 'The Multiprise website, with the early build for Apple Silicon Macs.' },
     ),
   ],
+  designle: [
+    galleryShot(
+      'designle',
+      'home.webp',
+      { fr: 'Page d’accueil de Designle avec la cible du jour', en: 'Designle home page with today’s target' },
+      { fr: 'Une nouvelle interface à reproduire chaque jour, en trois niveaux, sans inscription.', en: 'A new piece of UI to match every day, at three levels, with no sign-up.' },
+    ),
+    galleryShot(
+      'designle',
+      'swing.webp',
+      { fr: 'Une partie : la cible à gauche, la construction de l’IA à droite avec son score', en: 'A round: the target on the left, the AI’s build on the right with its score' },
+      { fr: 'Une partie : vous décrivez la cible, l’IA construit exactement ce que vous avez dit, et un score mesure l’écart.', en: 'A round: you describe the target, the AI builds exactly what you said, and a score measures the gap.' },
+    ),
+    galleryShot(
+      'designle',
+      'hard.webp',
+      { fr: 'Cible du niveau difficile : une page complète de club de course', en: 'Hard target: a full run-club page' },
+      { fr: 'Le niveau difficile : une page entière, à décrire assez précisément pour que l’IA la reconstruise.', en: 'The hard level: a full page, to describe precisely enough for the AI to rebuild it.' },
+    ),
+    galleryShot(
+      'designle',
+      'how.webp',
+      { fr: 'Explication du jeu en trois étapes', en: 'The game explained in three steps' },
+      { fr: 'Regarder la cible, tenter un essai, ajuster à partir du résultat.', en: 'Look at the target, take a swing, adjust from where you landed.' },
+    ),
+  ],
   courier: [
     galleryShot(
       'courier',
@@ -788,6 +814,56 @@ const projects: PortfolioProject[] = [
     gallery: projectGalleries.bitbounty,
   },
   {
+    name: 'Designle',
+    kind: 'personal',
+    tileImage: '/work/logos/designle.svg',
+    year: '2026',
+    short: { fr: 'Un jeu quotidien pour apprendre à décrire une interface à une IA', en: 'A daily game for learning to describe UI to an AI' },
+    description: {
+      fr: 'Savoir dire précisément ce qu’on voit est devenu une compétence de design. Designle en fait un jeu quotidien : chaque jour, une nouvelle interface à reproduire avec des mots. Une IA construit exactement ce que vous décrivez, un score mesure l’écart avec la cible, et vous ajustez jusqu’à la toucher, en le moins d’essais possible. Trois niveaux par jour, du composant à la page complète, sans inscription.',
+      en: 'Saying exactly what you see has become a design skill. Designle turns it into a daily game: every day there’s a new piece of UI to recreate using only words. An AI builds exactly what you describe, a score measures the gap with the target, and you adjust until you land it, in as few prompts as you can. Three levels a day, from a component to a full page, with no sign-up.',
+    },
+    role: {
+      fr: 'Conception du jeu, design et développement complet : cibles quotidiennes, génération et rendu des essais, score, crédits et paiements.',
+      en: 'Game design, product design and full development: daily targets, building and rendering each swing, scoring, credits and payments.',
+    },
+    features: [
+      {
+        title: { fr: 'Une cible par jour', en: 'A target a day' },
+        text: {
+          fr: 'Trois niveaux chaque jour, de la même idée : un composant, une affiche, une page entière.',
+          en: 'Three levels every day, of the same idea: a component, a poster, a full page.',
+        },
+      },
+      {
+        title: { fr: 'L’IA construit ce que vous dites', en: 'The AI builds what you say' },
+        text: {
+          fr: 'Claude construit l’interface décrite, rendue dans un vrai navigateur, puis notée contre la cible.',
+          en: 'Claude builds the UI you described, it’s rendered in a real browser, then scored against the target.',
+        },
+      },
+      {
+        title: { fr: 'Des conseils sur la cible', en: 'Tips on the target' },
+        text: {
+          fr: 'Cliquez sur n’importe quelle partie de la cible pour un conseil, et voyez ce qui manque encore après chaque essai.',
+          en: 'Click any part of the target for a tip, and see what’s still off after each swing.',
+        },
+      },
+      {
+        title: { fr: 'Gratuit pour jouer', en: 'Free to play' },
+        text: {
+          fr: 'Des crédits gratuits chaque jour, sans compte. Des packs de crédits en option, payables par carte ou PayPal.',
+          en: 'Free credits every day, with no account. Optional credit packs, paid by card or PayPal.',
+        },
+      },
+    ],
+    tags: ['React', 'Claude', 'Playwright', 'Hono', 'Stripe'],
+    href: 'https://designle.vercel.app',
+    image: '/work/case-studies/designle/home.webp',
+    alt: { fr: 'Page d’accueil de Designle', en: 'Designle home page' },
+    gallery: projectGalleries.designle,
+  },
+  {
     name: 'Courier',
     kind: 'personal',
     tileImage: '/work/logos/courier.svg',
@@ -1078,4 +1154,4 @@ export const githubRepos: { name: string; language: string; year: string; text: 
 ];
 
 // Grid order (see the tile-N areas in css/main.css): one 2×2 feature, three wide tiles, five squares.
-export const gridProjects = [projects[2], projects[0], projects[1], projects[6], projects[4], projects[3], projects[5], projects[7], clientProjects[2], clientProjects[1]];
+export const gridProjects = [projects[2], projects[0], projects[1], projects[7], projects[6], projects[4], projects[3], projects[8], clientProjects[2], clientProjects[1]];
